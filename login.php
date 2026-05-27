@@ -51,7 +51,7 @@
 <body>
 
     <div class="login-card">
-        <h2>Iniciar Sesión</h2>
+        <h2>Panel Admin jorge</h2>
         <form action="validar.php" method="POST">
             <input type="text" name="username" placeholder="Usuario" required>
             <input type="password" name="password" placeholder="Contraseña" required>
