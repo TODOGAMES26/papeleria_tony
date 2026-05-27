@@ -1,6 +1,5 @@
 <?php
 session_start();
-// Si el usuario no ha iniciado sesión, lo mandamos a login
 if (!isset($_SESSION['logueado'])) {
     header("Location: login.php");
     exit();
@@ -10,11 +9,11 @@ include('conexion.php');
 $conexion = conectarBD();
 $rol = $_SESSION['rol'];
 ?>
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>Panel de Administración</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Poppins', sans-serif; background: #f4f7f6; padding: 20px; }
@@ -50,7 +49,6 @@ $rol = $_SESSION['rol'];
                     <td>\${$fila['precio']}</td>
                     <td>{$fila['stock']}</td>";
             
-            // Lógica de botones: Solo se muestran si el rol es admin
             if ($rol == 'admin') {
                 echo "<td>
                         <a href='editar.php?id={$fila['id']}' class='btn edit'>Editar</a>

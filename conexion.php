@@ -6,9 +6,9 @@ function conectarBD() {
     $pass = '24160778TSO';
     
     $conn = new mysqli($host, $user, $pass, $db);
-    if ($conn->connect_error) { return null; }
+    if ($conn->connect_error) { 
+        return null; 
+    }
     return $conn;
 }
 ?>
-
-// Prueba de despliegue continuo para el Tec
