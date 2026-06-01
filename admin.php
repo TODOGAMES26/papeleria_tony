@@ -31,7 +31,7 @@ $rol = $_SESSION['rol'];
 </head>
 <body>
 <div class="container">
-    <h1>Bienvenido, <?php echo $_SESSION['usuario']; ?></h1>
+    <h1>Bienvenido papeleria TONY</h1>
     <p>Rol actual: <strong><?php echo $rol; ?></strong></p>
 
     <table>
